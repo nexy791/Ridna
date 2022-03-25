@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:gravity="center_horizontal"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/iv_pick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        app:tint="?attr/colorSecondaryContainer" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/e_ukraine_regular"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="?attr/colorOnSecondaryContainer"
+        tools:text="00" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ic_day"
+        android:layout_width="6sp"
+        android:layout_height="6sp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="2dp"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        tools:ignore="SmallSp" />
+
+</FrameLayout>

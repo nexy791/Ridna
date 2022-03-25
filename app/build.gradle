@@ -1,0 +1,122 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
+    id("org.jlleitschuh.gradle.ktlint") version "10.2.1"
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.ribsky.ridna"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        resConfigs "uk", "en"
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    // Design
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0-beta01'
+
+    // ViewBinding
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate:1.5.3'
+
+    // SplashScreen
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+
+    // Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0-alpha03'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0-alpha03'
+
+    // Ext
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+
+
+    // Insetter
+    implementation 'dev.chrisbanes.insetter:insetter:0.6.1'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+
+    // Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+
+    // Di
+    implementation "io.insert-koin:koin-android:3.1.5"
+
+
+    // Room
+    implementation("androidx.room:room-runtime:2.4.2")
+    implementation("androidx.room:room-ktx:2.4.2")
+    kapt("androidx.room:room-compiler:2.4.2")
+
+    // Indicator
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    // DateTime
+    implementation 'com.github.cesarferreira:tempo:0.7.0'
+
+    // FlexBox
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    // ImageLoading
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    // Palette
+    implementation 'androidx.palette:palette:1.0.0'
+
+    // Moshi
+    implementation("com.squareup.moshi:moshi:1.13.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+
+    // Lang
+    implementation('com.akexorcist:localization:1.2.11') {
+        exclude group: 'androidx.core', module: 'core'
+    }
+
+    // LeakCanary
+    // debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
+
+
+    implementation project(path: ':data')
+    implementation project(path: ':domain')
+
+
+}

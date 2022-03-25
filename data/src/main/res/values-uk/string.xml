@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uevent_0">%s - 1 тиждень</string>
+    <string name="uevent_1">%s - 10 тижнів</string>
+    <string name="uevent_2">%s - 100 тижнів 🎉</string>
+    <string name="uevent_3">%s - 500 тижнів</string>
+    <string name="uevent_4">%s - 1 місяць 🎉</string>
+    <string name="uevent_5">%s - 3 місяці</string>
+    <string name="uevent_6">%s - 6 місяців</string>
+    <string name="uevent_7">%s - 50 місяців</string>
+    <string name="uevent_8">%s - 100 місяців 🎉</string>
+    <string name="uevent_9">%s - 100 днів 🎉</string>
+    <string name="uevent_10">%s - 500 днів</string>
+    <string name="uevent_11">%s - 1000 днів 🎉</string>
+    <string name="uevent_12">%s - 1 рік 🎉</string>
+    <string name="uevent_13">%s - 2 роки</string>
+    <string name="uevent_14">%s - 3 роки</string>
+    <string name="uevent_15">%s - 4 роки</string>
+    <string name="uevent_16">%s - 5 років 🎉</string>
+    <string name="uevent_17">%s - 6 років</string>
+    <string name="uevent_18">%s - 7 років</string>
+    <string name="uevent_19">%s - 8 років</string>
+    <string name="uevent_20">%s - 9 років</string>
+    <string name="uevent_21">%s - 10 років 🎉</string>
+    <string name="uevent_22">%s - 15 років 🎉</string>
+    <string name="uevent_23">%s - 20 років 🎉</string>
+    <string name="uevent_24">%s - 25 років 🎉</string>
+    <string name="uevent_25">%s - 30 років 🎉</string>
+    <string name="uevent_26">%s - 35 років 🎉</string>
+    <string name="uevent_27">%s - 40 років 🎉</string>
+    <string name="uevent_28">%s - 45 років 🎉</string>
+    <string name="uevent_29">%s - 50 років 🎉</string>
+</resources>

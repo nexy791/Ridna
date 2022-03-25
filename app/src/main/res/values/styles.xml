@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.App.Headline6</item>
+    </style>
+
+    <style name="TextAppearance.App.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/e_ukraine_regular</item>
+        <item name="android:fontFamily">@font/e_ukraine_regular</item>
+    </style>
+
+
+    <style name="BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false
+        </item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/e_ukraine_medium</item>
+    </style>
+
+
+</resources>

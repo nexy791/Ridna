@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main.xml"
+    app:startDestination="@id/nav_main">
+    <dialog
+        android:id="@+id/addEventDialog"
+        android:name="com.ribsky.ridna.ui.dialog.add.AddEventDialog"
+        android:label="@string/title_add_event" />
+    <dialog
+        android:id="@+id/eventDialog"
+        android:name="com.ribsky.ridna.ui.dialog.event.EventDialog"
+        android:label="@string/title_event">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </dialog>
+    <navigation
+        android:id="@+id/nav_main"
+        app:startDestination="@id/mainFragment">
+        <fragment
+            android:id="@+id/mainFragment"
+            android:name="com.ribsky.ridna.ui.main.MainFragment"
+            android:label="@string/title_main" />
+        <fragment
+            android:id="@+id/eventsFragment"
+            android:name="com.ribsky.ridna.ui.events.EventsFragment"
+            android:label="@string/title_events" />
+        <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.ribsky.ridna.ui.settings.SettingsFragment"
+            android:label="@string/title_settings" />
+        <fragment
+            android:id="@+id/libraryFragment"
+            android:name="com.ribsky.ridna.ui.library.LibraryFragment"
+            android:label="@string/title_library" />
+    </navigation>
+    <navigation
+        android:id="@+id/nav_relation"
+        app:startDestination="@id/relationFragment">
+        <fragment
+            android:id="@+id/relationFragment"
+            android:name="com.ribsky.ridna.ui.relation.RelationFragment"
+            android:label="@string/title_relation" />
+        <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.ribsky.ridna.ui.settings.SettingsFragment"
+            android:label="@string/title_settings" />
+        <fragment
+            android:id="@+id/libraryFragment"
+            android:name="com.ribsky.ridna.ui.library.LibraryFragment"
+            android:label="@string/title_library" />
+    </navigation>
+    <dialog
+        android:id="@+id/editRelationDialog"
+        android:name="com.ribsky.ridna.ui.dialog.relation.EditRelationDialog"
+        android:label="@string/title_edit" />
+</navigation>

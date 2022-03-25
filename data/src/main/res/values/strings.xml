@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uevent_0">%s - 1 week</string>
+    <string name="uevent_1">%s - 10 weeks</string>
+    <string name="uevent_2">%s - 100 weeks 🎉</string>
+    <string name="uevent_3">%s - 500 weeks</string>
+    <string name="uevent_4">%s - 1 month 🎉</string>
+    <string name="uevent_5">%s - 3 months</string>
+    <string name="uevent_6">%s - 6 months</string>
+    <string name="uevent_7">%s - 50 months</string>
+    <string name="uevent_8">%s - 100 months 🎉</string>
+    <string name="uevent_9">%s - 100 days 🎉</string>
+    <string name="uevent_10">%s - 500 days</string>
+    <string name="uevent_11">%s - 1000 days 🎉</string>
+    <string name="uevent_12">%s - 1 year 🎉</string>
+    <string name="uevent_13">%s - 2 years</string>
+    <string name="uevent_14">%s - 3 years</string>
+    <string name="uevent_15">%s - 4 years</string>
+    <string name="uevent_16">%s - 5 years 🎉</string>
+    <string name="uevent_17">%s - 6 years</string>
+    <string name="uevent_18">%s - 7 years</string>
+    <string name="uevent_19">%s - 8 years</string>
+    <string name="uevent_20">%s - 9 years</string>
+    <string name="uevent_21">%s - 10 years 🎉</string>
+    <string name="uevent_22">%s - 15 years 🎉</string>
+    <string name="uevent_23">%s - 20 years 🎉</string>
+    <string name="uevent_24">%s - 25 years 🎉</string>
+    <string name="uevent_25">%s - 30 years 🎉</string>
+    <string name="uevent_26">%s - 35 years 🎉</string>
+    <string name="uevent_27">%s - 40 years 🎉</string>
+    <string name="uevent_28">%s - 45 years 🎉</string>
+    <string name="uevent_29">%s - 50 years 🎉</string>
+</resources>

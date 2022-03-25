@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_main"
+        android:icon="@drawable/ic_outline_hive_24"
+        android:title="@string/bottom_main" />
+
+    <item
+        android:id="@+id/nav_relation"
+        android:icon="@drawable/ic_outline_supervised_user_circle_24"
+        android:title="@string/bottom_relation" />
+
+</menu>
