@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.cesarferreira.tempo.Tempo
 import com.ribsky.data.model.event.EventApiModel
 import com.ribsky.domain.model.event.BaseEventModel
 import com.ribsky.ridna.R
@@ -13,6 +12,7 @@ import com.ribsky.ridna.databinding.ItemEventListBinding
 import com.ribsky.ridna.utils.ext.DateExtension.Companion.date
 import com.ribsky.ridna.utils.ext.DateExtension.Companion.diffInDays
 import com.ribsky.ridna.utils.ext.DateExtension.Companion.format
+import java.util.Date
 
 class EventListAdapter(private val callback: Callback) :
     ListAdapter<BaseEventModel, RecyclerView.ViewHolder>(DiffCallbackEvent) {
@@ -32,7 +32,7 @@ class EventListAdapter(private val callback: Callback) :
     private class EventHolder(private val binding: ItemEventListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        private val time = Tempo.now.time.date
+        private val time = Date().time.date
 
         fun bind(item: BaseEventModel, callback: Callback) {
 

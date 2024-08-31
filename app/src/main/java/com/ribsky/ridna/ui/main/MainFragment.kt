@@ -5,7 +5,6 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isGone
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
-import com.cesarferreira.tempo.Tempo
 import com.ribsky.data.model.event.EventApiModel
 import com.ribsky.domain.model.event.BaseEventModel
 import com.ribsky.ridna.R
@@ -25,6 +24,7 @@ import com.ribsky.ridna.utils.ext.ViewExtension.Companion.alert
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.positiveButton
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.string
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.Date
 
 class MainFragment :
     BaseFragment<MainViewModel, FragmentMainBinding>(FragmentMainBinding::inflate) {
@@ -83,7 +83,7 @@ class MainFragment :
             }
         })
         calendarView.fillCalendar()
-        viewModel.getEventByDate(Tempo.now.time.date)
+        viewModel.getEventByDate(Date().time.date)
     }
 
     private fun initListeners() {

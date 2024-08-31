@@ -5,7 +5,6 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isGone
 import androidx.fragment.app.setFragmentResult
 import androidx.palette.graphics.Palette
-import com.cesarferreira.tempo.Tempo
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.DateValidatorPointBackward
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -25,6 +24,7 @@ import com.ribsky.ridna.utils.ext.ViewExtension.Companion.color
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.snackbar
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.string
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.Date
 
 class EditRelationDialog :
     FullScreenBaseSheet<FragmentEditRelationBinding>(FragmentEditRelationBinding::inflate) {
@@ -60,7 +60,7 @@ class EditRelationDialog :
 
     override fun initViews() = with(binding) {
 
-        relationModel.date = Tempo.now.time.date
+        relationModel.date = Date().time.date
         chipAdd.text = relationModel.date.format
 
         ivBackgroundSwitcher.setOnClickListener {

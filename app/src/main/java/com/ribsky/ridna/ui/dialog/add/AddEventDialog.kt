@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
-import com.cesarferreira.tempo.Tempo
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.DateValidatorPointBackward
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -21,6 +20,7 @@ import com.ribsky.ridna.utils.ext.ViewExtension.Companion.action
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.snackbar
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.string
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.Date
 
 class AddEventDialog :
     FullScreenBaseSheet<FragmentAddEventBinding>(FragmentAddEventBinding::inflate) {
@@ -59,7 +59,7 @@ class AddEventDialog :
 
     override fun initViews() = with(binding) {
 
-        event.date = Tempo.now.time.date
+        event.date = Date().time.date
 
         chipAdd.text = event.date.format
         materialToolbar.setNavigationOnClickListener { dismiss() }

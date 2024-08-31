@@ -9,8 +9,13 @@ import android.widget.ImageView
 import androidx.annotation.AttrRes
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.cesarferreira.tempo.*
 import com.google.android.material.textview.MaterialTextView
+import com.ribsky.data.utils.lib.beginningOfMonth
+import com.ribsky.data.utils.lib.days
+import com.ribsky.data.utils.lib.day
+import com.ribsky.data.utils.lib.minus
+import com.ribsky.data.utils.lib.months
+import com.ribsky.data.utils.lib.plus
 import com.ribsky.ridna.R
 import com.ribsky.ridna.model.calendar.CalendarModel
 import com.ribsky.ridna.model.calendar.DayModel
@@ -30,7 +35,7 @@ class CalendarView @JvmOverloads constructor(
         fun onClicked(date: Long)
     }
 
-    private var currentDate: Date = Tempo.now
+    private var currentDate: Date = Date()
         set(value) {
             field = value
             adapter?.updateCurrentDate(value)
@@ -123,7 +128,7 @@ class CalendarView @JvmOverloads constructor(
                 timeInMillis = _date
             }.get(Calendar.DAY_OF_MONTH)
 
-            val isToday = _date == Tempo.now.time.date
+            val isToday = _date == Date().time.date
             dates.add(
                 CalendarModel(
                     date = _date,
@@ -137,7 +142,7 @@ class CalendarView @JvmOverloads constructor(
         for (i in 1..daysInMonth) {
             val _date = date.time.date
 
-            val isToday = _date == Tempo.now.time.date
+            val isToday = _date == Date().time.date
             dates.add(
                 CalendarModel(
                     date = _date,
@@ -188,6 +193,6 @@ class CalendarView @JvmOverloads constructor(
             itemAnimator = null
             isNestedScrollingEnabled = false
         }
-        tvCalendar?.text = context.string(R.string.today_date).format(Tempo.now.time.date.format)
+        tvCalendar?.text = context.string(R.string.today_date).format(Date().time.date.format)
     }
 }

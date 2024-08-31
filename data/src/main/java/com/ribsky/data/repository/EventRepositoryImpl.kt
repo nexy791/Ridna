@@ -1,11 +1,17 @@
 package com.ribsky.data.repository
 
 import android.content.Context
-import com.cesarferreira.tempo.*
 import com.ribsky.data.R
 import com.ribsky.data.db.event.EventDao
 import com.ribsky.data.model.event.EventApiModel
 import com.ribsky.data.utils.RandomColors
+import com.ribsky.data.utils.lib.days
+import com.ribsky.data.utils.lib.months
+import com.ribsky.data.utils.lib.plus
+import com.ribsky.data.utils.lib.week
+import com.ribsky.data.utils.lib.weeks
+import com.ribsky.data.utils.lib.year
+import com.ribsky.data.utils.lib.years
 import com.ribsky.domain.model.event.BaseEventModel
 import com.ribsky.domain.repository.EventRepository
 import java.util.*
@@ -16,7 +22,7 @@ class EventRepositoryImpl(
 ) : EventRepository {
 
     override suspend fun getUpcomingEvent(): BaseEventModel? =
-        eventDao.getEvent((Tempo.now).time.date)
+        eventDao.getEvent((Date()).time.date)
 
     override suspend fun getAllEventsWithId(id: String): List<BaseEventModel> =
         eventDao.getEvents(id)

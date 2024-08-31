@@ -1,7 +1,6 @@
 package com.ribsky.ridna.utils.ext
 
 import android.content.Context
-import com.cesarferreira.tempo.Tempo
 import com.ribsky.ridna.R
 import com.ribsky.ridna.utils.ext.ViewExtension.Companion.string
 import java.text.SimpleDateFormat
@@ -45,6 +44,6 @@ class DateExtension {
             get() = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(this)
 
         val Long.daysBetween: Int
-            get() = TimeUnit.MILLISECONDS.toDays(Tempo.now.time.date - this).toInt()
+            get() = TimeUnit.MILLISECONDS.toDays(Date().time.date - this).toInt()
     }
 }

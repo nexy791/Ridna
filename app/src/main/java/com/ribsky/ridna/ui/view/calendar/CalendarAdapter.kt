@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.cesarferreira.tempo.Tempo
 import com.ribsky.ridna.R
 import com.ribsky.ridna.databinding.ItemCalendarDayBinding
 import com.ribsky.ridna.model.calendar.CalendarModel
@@ -18,7 +17,7 @@ class CalendarAdapter(private val callback: CalendarCallback) :
         var model: CalendarModel? = null
     )
 
-    private var currentDate: Date = Tempo.now
+    private var currentDate: Date = Date()
     private var selectedItem: SelectedItem = SelectedItem()
 
     fun updateCurrentDate(date: Date) {

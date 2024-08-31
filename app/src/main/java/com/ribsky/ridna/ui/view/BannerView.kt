@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import androidx.annotation.AttrRes
-import com.cesarferreira.tempo.Tempo
 import com.google.android.material.textview.MaterialTextView
 import com.ribsky.domain.model.event.BaseEventModel
 import com.ribsky.ridna.R
 import com.ribsky.ridna.utils.ext.DateExtension.Companion.diffInDays
+import java.util.Date
 
 class BannerView @JvmOverloads constructor(
     context: Context,
@@ -37,7 +37,7 @@ class BannerView @JvmOverloads constructor(
 
     fun setEvent(eventModel: BaseEventModel) {
         eventDate = eventModel.date
-        tvDays?.text = context.diffInDays(Tempo.now.time, eventDate!!)
+        tvDays?.text = context.diffInDays(Date().time, eventDate!!)
     }
 
     private fun init(context: Context) {
